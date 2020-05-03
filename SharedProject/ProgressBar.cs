@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace SharedProject
 {
@@ -149,8 +150,8 @@ namespace SharedProject
 		/// <returns></returns>
 		private bool IsConsoleAvaliable()
 		{
-			int j = Console.Read();
-			return j != -1;
+			bool is_console_app = Console.OpenStandardInput(1) != Stream.Null;
+			return is_console_app;
 		}
 	}
 }
