@@ -134,6 +134,8 @@ namespace SharedProject
 			// print all progress info (e.g: "Progress: [ 50%] ")
 			Console.Write(String.Format("{0," + title_max + "}: [{1,3:##0}%] ", title, percent));
 
+			//Flush Buffer
+			Console.Write("");
 			// print the loading progress (e.g: ##....)
 			Console.Write($"[{progress}{remaining}]");
 
