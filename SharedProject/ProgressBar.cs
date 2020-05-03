@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+//CHANGE 1
 using System.IO;
 
 namespace SharedProject
@@ -136,6 +137,7 @@ namespace SharedProject
 			Console.Write(String.Format("{0," + title_max + "}: [{1,3:##0}%] ", title, percent));
 
 			//Flush Buffer
+			//CHANGE 2
 			Console.Write("");
 			// print the loading progress (e.g: ##....)
 			Console.Write($"[{progress}{remaining}]");
@@ -148,6 +150,7 @@ namespace SharedProject
 		/// Check if console is avaliable
 		/// </summary>
 		/// <returns></returns>
+		//CHANGE 3
 		private bool IsConsoleAvaliable()
 		{
 			bool is_console_app = Console.OpenStandardInput(1) != Stream.Null;
